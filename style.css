@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10213d, #246b8e);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+}
+
+header {
+    margin-bottom: 28px;
+}
+
+.sopratitolo {
+    color: #8de3e8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: clamp(32px, 7vw, 48px);
+    margin: 12px 0;
+}
+
+header p:last-child {
+    color: #d3e4f2;
+    line-height: 1.6;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.ricerca {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #b8ccdf;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 13px 20px;
+    background: #8de3e8;
+    color: #10213d;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b3f1f3;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#messaggio {
+    min-height: 24px;
+    color: #ffe3a3;
+}
+
+.card {
+    background: #ffffff;
+    color: #142a43;
+    padding: 26px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.descrizione {
+    color: #597086;
+}
+
+.temperatura {
+    margin: 20px 0;
+    font-size: 68px;
+    font-weight: bold;
+}
+
+.gradi {
+    font-size: 30px;
+    vertical-align: top;
+}
+
+.dettagli {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.dettagli > div {
+    background: #eef5fa;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.etichetta {
+    display: block;
+    margin-bottom: 8px;
+    color: #597086;
+    font-size: 14px;
+}
+
+.aggiornamento {
+    margin-bottom: 0;
+    color: #597086;
+    font-size: 13px;
+}
+
+footer {
+    margin-top: 28px;
+    color: #d3e4f2;
+    font-size: 13px;
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 420px) {
+    .ricerca {
+        flex-direction: column;
+    }
+
+    .temperatura {
+        font-size: 56px;
+    }
+}

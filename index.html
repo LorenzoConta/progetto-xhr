@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mini dashboard meteo realizzata con XMLHttpRequest">
+    <title>Mini Dashboard Meteo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="sopratitolo">METEO IN TEMPO REALE</p>
+            <h1>Che tempo fa?</h1>
+            <p>Cerca una città e scopri le condizioni meteorologiche.</p>
+        </header>
+
+        <form id="meteoForm">
+            <label for="citta">Nome della città</label>
+            <div class="ricerca">
+                <input
+                    type="text"
+                    id="citta"
+                    placeholder="Es. Milano"
+                    required
+                    maxlength="100"
+                >
+                <button type="submit" id="btnCerca">Cerca</button>
+            </div>
+        </form>
+
+        <p id="messaggio" role="status" aria-live="polite"></p>
+
+        <section id="risultato" class="card" hidden>
+            <h2 id="nomeCitta"></h2>
+            <p id="descrizione" class="descrizione"></p>
+
+            <div class="temperatura">
+                <span id="temperatura"></span>
+                <span class="gradi">°C</span>
+            </div>
+
+            <div class="dettagli">
+                <div>
+                    <span class="etichetta">Vento</span>
+                    <strong id="vento"></strong>
+                </div>
+                <div>
+                    <span class="etichetta">Umidità</span>
+                    <strong id="umidita"></strong>
+                </div>
+            </div>
+
+            <p id="aggiornamento" class="aggiornamento"></p>
+        </section>
+
+        <footer>
+            Dati meteo forniti da Open-Meteo.
+        </footer>
+    </main>
+</body>
+</html>
